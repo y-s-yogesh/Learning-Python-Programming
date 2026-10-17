@@ -1,4 +1,5 @@
 ''' Types of Data:
+
 1. Int          #whole numbers
 2. Float        #decimal numbers
 3. Complex      #real and imaginary numbers as examples 2+3j, 4-5j, -4, -4.25, 4X, 4X+3Y
@@ -10,56 +11,84 @@
 9. Set          #unordered collection of unique items'''
 
 '''Numeric Data Types:
+
 * Int - Integer
 * Float - Decimal Number
 * Complex - Real and Imaginary Number'''
 
 '''Text Data Types:
+
 * String - A sequence of characters'''
 
 '''Sequence Data Types:
+
 * List - A collection of items which is ordered and changeable. Allows duplicate members.
 * Tuple - A collection of items which is ordered and unchangeable. Allows duplicate members.
 * Dictionary - A collection of items which is unordered, changeable and indexed. No duplicate members.
 * Set - A collection of unique items which is unordered. No duplicate members.'''
 
+
+
 '''Variables:
-* Variables are containers for storing data values of any type. In Python, you do not need to declare the type of variable, it is inferred from the value assigned to it. It's like a college bag used to store different types of subject books(any subject book can be stored in the bag).
-* Variable names can contain letters, numbers, and underscores, but cannot start with a number. They are case-sensitive.
-* Using variables we can store, access, & modify the data values at any time.
-* example: a = 10, b = 20, c = a + b, print(c) also Name = "Yogesh", Age = 20, print(Name, Age) are also examples of variables.'''
+
+--> Variables are containers for storing data values of any type. In Python, you do not need to declare the type of variable, it is inferred from the value assigned to it. It's like a college bag used to store different types of subject books(any subject book can be stored in the bag).
+--> Variable names can contain letters, numbers, and underscores, but cannot start with a number. They are case-sensitive.
+--> Using variables we can store, access, & modify the data values at any time.
+--> example: a = 10, b = 20, c = a + b, print(c) also Name = "Yogesh", Age = 20, print(Name, Age) are also examples of variables.
+
+* Variable naming rules:
+
+--> Must start with a letter or underscore.
+--> Letters, numbers, & underscores are only acceptable.
+--> They are case-sensitive & hence most of the time small-case letters are used for the naming conventions.
+
+'''
 
 '''Comments:
-* Comments are used to explain code and make it more readable. In Python, comments start with the # symbol. 
-* Multi-line comments can be created using triple quotes ('''''' or """)'''
+
+--> Comments are used to explain code and make it more readable. In Python, comments start with the # symbol. 
+--> Multi-line comments can be created using triple quotes ('''''' or """)'''
 
 ''' To take Input from user:
-* The input() function is used to take input from the user. It always returns the input as a string.
-* To convert the input to a specific data type, we can use type conversion functions like int(), float(), etc. For example, Age = int(input("Enter your age: ")) will take input from the user and convert it to an integer.
+
+--> The input() function is used to take input from the user. It always returns the input as a string.
+--> To convert the input to a specific data type, we can use type conversion functions like int(), float(), etc.
+
+For example, Age = int(input("Enter your age: ")) will take input from the user and convert it to an integer.
 example: Name = input("Enter your name: ") will take input from the user and store it as a string in the variable Name.'''
 
 '''To print output to the console:
-* The print() function is used to display output to the console. It can take multiple arguments and will print them separated by spaces. For example, print("Hello", Name, "you are", Age, "years old.") will print the values of the variables Name and Age along with the text.
+
+--> The print() function is used to display output to the console. It can take multiple arguments and will print them separated by spaces. For example, print("Hello", Name, "you are", Age, "years old.") will print the values of the variables Name and Age along with the text.
+
 example: print("Hello", Name, "you are", Age, "years old.") will print the values of the variables Name and Age along with the text.
+
 Name = input("Enter your name: ")     #Taking input from user
 Age = int(input("Enter your age: "))   #Taking input from user and converting it to integer
 print("Hello", Name, "you are", Age, "years old.")  #Printing the values of variables'''
 
 '''Operators: an operator is a symbol that tells/helps the interpreter to perform specific mathematical, relational or logical operations/manipulations. Python divides the operators in the following groups:
-* Arithmetic Operators - Used to perform mathematical operations like addition (+), subtraction (-), multiplication (*), division (/), integer division (//), modulus/modulo (%), and exponentiation (**).
-* Assignment Operators - Used to assign values to variables (e.g., =, +=, -=, *=, /=, //=, %=, **=).
-* Comparison/Relational Operators - Used to compare two values and return a boolean result (True or False). (e.g., equals to (==), not equals to (!=), greater than (>), less than (<), greater than or equal to (>=), less than or equal to (<=)).
-* Logical Operators - Used to combine conditional statements (and, or, not).'''
+
+--> Arithmetic Operators - Used to perform mathematical operations like addition (+), subtraction (-), multiplication (*), division (/), integer division or double division (//), modulus/modulo (%), and exponentiation (**).
+
+--> Assignment Operators - Used to assign values to variables (e.g., =, +=, -=, *=, /=, //=, %=, **=).
+
+--> Comparison/Relational Operators - Used to compare two values and return a boolean result (True or False). (e.g., equals to (==), not equals to (!=), greater than (>), less than (<), greater than or equal to (>=), less than or equal to (<=)).
+
+--> Logical Operators - Used to combine conditional statements (and, or, not).'''
 
 '''selection control structures/statements: (Programming Constructs or Decision Making Statements or Control Flow Statements):-
-* Control flow statements are used to control the flow of execution of the program based on certain conditions. The main control flow statements in Python are:
-* if statement - Used to execute a block of code if a specified condition is true.
+
+--> Control flow statements are used to control the flow of execution of the program based on certain conditions. The main control flow statements in Python are:
+--> if statement - Used to execute a block of code if a specified condition is true.
+
 example:
 a = 30
 b = 20
 if(a>b): print("a is larger value", a, b)
 
-* if-else statement - Used to execute one block of code if a specified condition is true, and another block of code if the condition is false.
+--> if-else statement - Used to execute one block of code if a specified condition is true, and another block of code if the condition is false.
+
 example:
 a = 30
 b = 20
@@ -68,7 +97,8 @@ if(a>b):
 else:
     print("b is larger value", a, b)
 
-* if-elif-else statement(multiple if's) - Used to execute one block of code among multiple conditions.
+--> if-elif-else statement(multiple if's) - Used to execute one block of code among multiple conditions.
+
 example:
 a = 30
 b = 20
@@ -80,8 +110,11 @@ elif(b>c):
 else:
     print("c is the largest value", a, b, c)'''
 
+
 '''Iteration control structures/statements: (Looping Statements or Repetition Control Statements or Iterative Control Statements):-Control flow statements are used to execute a block of code repeatedly based on certain conditions. The main control flow statements in Python are:
-* for loop - Used to iterate over a sequence (like a list, tuple, dictionary, set, or string) and execute a block of code for each item in the sequence.
+
+--> for loop - Used to iterate over a sequence (like a list, tuple, dictionary, set, or string) and execute a block of code for each item in the sequence.
+
 example:
 a=[1,2,3,4,5,6,7,8,9,10]
 for number in a:
@@ -91,17 +124,20 @@ example 2:
 for number in 1,2,3,4,5,6,7,8,9,10:
     print(number)
 
-*while loop - Used to execute a block of code repeatedly as long as a specified condition is true.
+--> while loop - Used to execute a block of code repeatedly as long as a specified condition is true.
+
 example:
 while(a<=10):
     print(a)'''
 
 '''Loop Control Statements: (Break, Continue, Pass)
+
 * break statement - Used to exit the loop prematurely when a certain condition is met.
 * continue statement - Used to skip the current iteration of the loop and move to the next iteration.
 * pass statement - Used as a placeholder for future code. It does nothing when executed.'''
 
 '''Collections: are used to store multiple items in a single variable or used to group the data/information & store them together.
+
 *Different types of collections in python are: 
 1. List
 2. String
@@ -110,7 +146,8 @@ while(a<=10):
 5. Tuple
 
 * List - A collection of items/elements which is ordered and changeable. Allows duplicate members. Lists are defined using square brackets [] & Separated by commas. Here each item in the list is called an element. Lists can contain elements of different data types like integers, strings, floats, etc. Lists are mutable, meaning we can change their content without changing their identity.
-* Indexing in lists starts from 0 for the first element, 1 for the second element, and so on. Negative indexing is also allowed, where -1 refers to the last element, -2 to the second last element, and so on.
+
+--> Indexing in lists starts from 0 for the first element, 1 for the second element, and so on. Negative indexing is also allowed, where -1 refers to the last element, -2 to the second last element, and so on.
 example: 
 Attendancelist = [1, 2, 3, 4, 5]
 
@@ -133,12 +170,16 @@ Attendancelist[1:3] #will return a new list containing elements at indices 1 and
 Attendacelist[:3] #will return a new list containing elements from the beginning up to index 2, which is [1, 2, 3].
 Attendacelist[2:] #will return a new list containing elements from index 2 to the end, which is [3, 4, 5].
 
+
+
 * String - A collection of characters which is ordered and unchangeable. Strings are defined using single or double quotes.
 example:
 Name = "Yogesh"
 Name[4] #will return the character at index 4, which is 's' or accessing the 4th alphabet in the name ''Yogesh''.
 Name.upper() #will return the string in uppercase, which is 'YOGESH'.
 Name.lower() #will return the string in lowercase, which is 'yogesh'.
+
+
 
 * Set - A collection of unique items which is unordered. Sets are defined using curly braces {} or the set() function. Sets do not allow duplicate members and are mutable, meaning we can add or remove elements from a set.
 
@@ -163,6 +204,8 @@ Rollno.union(music) #will return a new set containing all unique elements from b
 intersection of 2 sets: Rollno.intersection(music) #will return a new set containing only the elements that are present in both sets, which is {1, 2, 3}.
 '''
 
+
+
 '''
 *Tuple - A collection of items which is ordered and unchangeable. Tuples are defined using parentheses () and separated by commas. Tuples can contain elements of different data types like integers, strings, floats, etc. Tuples are immutable, meaning we cannot change their content after creation.
 example:
@@ -175,6 +218,8 @@ vegetables[2] #will return the third element of the tuple, which is 'onion'.
 To add or combine a tuple:
 combo = vegetables + vegetables #output will be ('carrot', 'potato', 'onion', 'carrot', 'potato', 'onion').
 '''
+
+
 
 '''Dictionary - A collection of items which is unordered, changeable and indexed. Dictionaries are defined using curly braces {} and consist of key-value pairs. Each key is unique and is used to access its corresponding value. Dictionaries are mutable, meaning we can change their content by adding, modifying, or removing key-value pairs.
 example:
