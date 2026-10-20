@@ -1,0 +1,59 @@
+ python -m venv .venv			- to create an environment
+
+Activate the environment:
+
+Platform			Command
+Windows			.venv\Scripts\activate
+macOS / Linux		source .venv/bin/activate
+
+@Problem encountered: "cannot be loaded becaused running scripts is disabled on this system" 
+# means that: As a default running the scripts without administrative preveledges are restricted so, in order to run the preveleges we should use the command "Get-ExecutionPolicy" or "Get-ExecutionPolicy -List" and check for the current status as "Restricted, AllSigned, RemoteSigned, Unrestricted" & run the related commands to make the execution of specific commands. Be aware before setting the policy to any status as some scripts may contain malwares.
+
+
+1. Change the Execution Policy Temporarily
+If you just need to run a single script and don’t want to change system-wide settings:
+
+command: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+This allows scripts to run only for the current PowerShell session. When you close the session, the restriction returns.
+
+2. Change the Execution Policy Permanently for Your User
+To adjust the policy for your user account:
+
+command: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+
+This is less intrusive than system-wide changes and is often acceptable in environments where users need to run their own scripts.
+
+3. Change the Execution Policy Permanently for the Whole System
+For administrators needing scripts to run across all accounts:
+
+command: Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned -Force
+
+⚠️ Warning: This affects all users on the machine. Only use this if you understand the security implications. Administrative privileges are required to set this.
+
+4. Run Scripts Without Changing Policy
+You can also bypass the execution policy just for a single script run:
+
+command: powershell.exe -ExecutionPolicy Bypass -File .\yourscript.ps1
+
+This doesn’t change any settings and avoids potential conflicts with organizational policies.
+
+
+
+
+"https://www.easy365manager.com/script-ps1-cannot-be-loaded-because-running-scripts-is-disabled-on-this-system/"
+"https://www.reddit.com/r/computer/comments/uxdek5/file_cannot_be_loaded_because_running_scripts_is/"
+
+If you’re only looking to run the script this one time, use the following command to allow it to run in the current PowerShell session:
+
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
+In the above command, the scope is set to ‘Process’. This means that the new execution policy is only valid in the current process. The old restrictions still apply outside of this specific PowerShell session.
+
+Alternatively, if you want to be able to run scripts freely on your system going forward, use the following command:
+
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+When the scope is set to ‘User’, the new PowerShell execution policy is persisted in the registry and will stick across PowerShell sessions and system reboots.
+
+See a complete overview of Execution Policies and Execution Policy Scopes below.
+
+
